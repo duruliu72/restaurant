@@ -1,0 +1,33 @@
+     <div class="col-md-6 online-reservation">
+                        <div class="row">
+                            <div class="col-md-12 book-table-title">
+                                <h2>Online Order</h2>
+                                <p> Order your desire item</p>
+                            </div>
+                        </div>
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <input type="text" class="form-control" placeholder="Name">
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <input type="email" class="form-control" placeholder="Email">
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <input type="text" class="form-control" placeholder="Phone">
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <input type="text" class="form-control" placeholder="mm/dd/yy">
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <input type="text" class="form-control" placeholder="Time">
+                                </div>
+                                <div class="col-md-12 mb-4">
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                </div>
+                                <div class="col-md-6">
+                                    <button type="submit" class="btn btn-primary order-btn">BOOK A TABLE</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
