@@ -272,13 +272,13 @@ body {
 .booking-table {}
 
 .booking-table img {
-    height: 100%
+    height: auto;
 }
 
 .online-order {}
 
 .online-order img {
-    height: 100%;
+    height: auto;
 }
 
 /*6. our-team-section Start*/

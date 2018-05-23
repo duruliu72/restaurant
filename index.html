@@ -13,13 +13,15 @@
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap3.css" rel="stylesheet">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
     <!-- Custom styles for this template -->
     <link href="carousel.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
 </head>
 
-<body>
+<body id="page">
     <header>
         <nav id="bg" class="navbar navbar-expand-md navbar-dark fixed-top">
             <a class="navbar-brand" href="#">Captain Cook</a>
@@ -29,7 +31,7 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav ml-auto rmenubar">
                     <li class="nav-item active">
-                        <a class="nav-link scroll" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link scroll" href="#page">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link scroll" href="#about-section">About Us</a>
@@ -380,7 +382,13 @@
                                 <input type="text" class="form-control" placeholder="Phone">
                             </div>
                             <div class="col-md-6 mb-4">
-                                <input type="text" class="form-control" placeholder="mm/dd/yy">
+                                <div class='input-group date' id='datetimepicker1'>
+                                    <input type='text' class="form-control" />
+                                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
+                                <!--                                <input type="text" class="form-control" placeholder="mm/dd/yy">-->
                             </div>
                             <div class="col-md-6 mb-4">
                                 <input type="text" class="form-control" placeholder="Time">
@@ -575,7 +583,7 @@
                 <div class="col-md-3 mb-4 gallery-item">
                     <img class="img-fluid" src="img/gallery/beer-bread-delicious-5249.jpg" alt="">
                 </div>
-                 <div class="col-md-3 mb-4 gallery-item">
+                <div class="col-md-3 mb-4 gallery-item">
                     <img class="img-fluid" src="img/gallery/asparagus-barbecue-bbq-675951.jpg" alt="">
                 </div>
                 <div class="col-md-3 mb-4 gallery-item">
@@ -718,9 +726,14 @@
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
     <script src="assets/js/vendor/holder.min.js"></script>
     <script src="scrolling/js/scrolling-nav.js"></script>
+    <script src="js/moment.min.js"></script>
+    <script src="js/bootstrap-datetimepicker.min.js"></script>
     <script src="js/script.js"></script>
     <script>
         $(document).ready(function() {
+            $(function() {
+                $('#datetimepicker1').datetimepicker();
+            });
             var containerEl = document.querySelector('.grid');
             var mixer = mixitup(containerEl);
             $('.cheaf-carousel').owlCarousel({
