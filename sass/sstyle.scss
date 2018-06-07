@@ -1,0 +1,921 @@
+$meroun:#CA3D26;
+$white_color:#FFFFFF;
+$light-black:rgba(0, 0, 0, 0.7);
+$blackcolor:#000000;
+$primary_color:$meroun;
+$secondary_color:$light-black;
+$common_color:$white_color;
+$anchor_color1:$blackcolor;
+$anchor_color2:$meroun;
+
+$hover_color1:$meroun;
+$hover_color2:$blackcolor;
+
+$border_color1:$meroun;
+$border_color2:$blackcolor;
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+/*table of content*/
+
+/* ==============================================
+* Global
+1. Nav bar
+2. Slide show
+3. About us
+4. Offer section Start
+5.Food menu
+6. Order-section
+7. our-team-section
+8. Online order section
+9. Our Gellary section
+10. Our Blog section
+11. Contact Us section
+12. Footer section
+ ============================================== */
+
+/*table of content*/
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+.navbar-nav .nav-link.active {
+    background: #f00 !important;
+}
+
+
+
+header {
+    padding: 154px 0 100px;
+}
+
+section {
+    padding: 150px 0;
+}
+
+
+
+/*Responsive*/
+
+@media (min-width: 992px) {
+    header {
+        padding: 156px 0 100px;
+    }
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+    /* 1 */
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    -webkit-clip-path: none;
+    clip-path: none;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+.clear {
+    clear: both;
+}
+
+/* ==============================================
+1. Nav bar
+ ============================================== */
+
+.nav-bg {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 0px 15px !important;
+    padding: 0px;
+    a {
+
+        color: $anchor_color1;
+        &:hover {
+            color: $primary_color;
+        }
+    }
+    .top-menu {
+        li {
+            padding: 0px 5px;
+            position: relative;
+            a {
+                text-transform: uppercase;
+                padding: 18px 6px;
+                color: $anchor_color1;
+                border-bottom: 4px solid transparent;
+                position: relative;
+                &:hover {
+                    color: $primary_color;
+                }
+            }
+            &:after {
+                content: "";
+                display: block;
+                top: 0px;
+                left: 100%;
+                height: 35%;
+                width: 1px;
+                background: $primary_color;
+                position: absolute;
+            }
+            &:last-of-type {
+                &:after {
+                    display: none;
+                }
+            }
+        }
+        li.active {
+            a {
+                &:after {
+                    content: "";
+                    display: block;
+                    background: $primary_color;
+                    height: 4px;
+                    position: absolute;
+                    top: 100%;
+                    width: 100%;
+                    left: 0px;
+                }
+            }
+        }
+
+    }
+}
+
+/* ==============================================
+2. Slide show
+ ============================================== */
+
+.slider-item {
+    height: 500px;
+    position: relative;
+    img {
+        height: 500px;
+    }
+    .caption {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .cp-text {
+            h1 {
+                text-transform: uppercase;
+                color: $common_color;
+            }
+            p {
+                margin-top: 20px;
+                .btn-reg {
+                    background: rgba(0, 0, 0, 0.4);
+                    border: 1px solid #fff !important;
+                }
+            }
+        }
+    }
+}
+
+/* ==============================================
+3.  About Section
+ ============================================== */
+
+#about-section {
+    padding-top: 50px;
+    padding-bottom: 25px;
+    .contact-title {
+        margin-bottom: 50px;
+        h2 {
+            text-transform: uppercase;
+            text-align: center;
+            color: $primary_color;
+        }
+    }
+    .about-para {
+        line-height: 1.8rem;
+        p {
+            font-size: 16px;
+        }
+        .large-letter {
+            float: left;
+            font-size: 80px;
+            font-weight: 700;
+            margin-right: 10px;
+            line-height: 1;
+        }
+    }
+}
+
+/* ==============================================
+4. Offer section Start
+ ============================================== */
+
+#offer-section {
+    padding: 25px 0px;
+    background-image: url(../img/paralex1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 450px;
+    position: relative;
+    &:before {
+        content: "";
+        display: block;
+        background: $secondary_color;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+    .offer-title {
+        margin-bottom: 50px;
+        h2 {
+            padding: 25px 0px;
+            text-align: center;
+            color: $common_color;
+        }
+    }
+    .offer {
+        .offer-container {
+            .offer-item {
+                text-align: center;
+                .offer-image {
+                    margin-bottom: 25px;
+                    position: relative;
+                    img {
+                        width: 150px !important;
+                        height: 150px;
+                        border-radius: 50%;
+                        display: inline !important;
+                    }
+                    .price {
+                        width: 50px;
+                        height: 50px;
+                        display: block;
+                        text-align: center;
+                        background: $primary_color;
+                        color: $common_color;
+                        border-radius: 50%;
+                        position: absolute;
+                        top: 0px;
+                        right: 25px;
+                        line-height: 25px;
+                        padding-top: 10px;
+
+                    }
+                }
+                .offer-desc {
+                    h2 {
+                        color: $common_color;
+                    }
+                    p {
+                        color: $common_color;
+                    }
+                    .offer-btn {
+                        background: transparent;
+                        width: 75%;
+                        color: $common_color;
+                        &:hover {
+                            background: $hover_color1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ==============================================
+5.  Menus section start
+ ============================================== */
+
+#menu-section {
+    padding: 25px 0px;
+    .menu-title {
+        margin-bottom: 50px;
+        h2 {
+            text-align: center;
+            text-transform: uppercase;
+        }
+    }
+    .menu-content {
+        .td-menu-item {
+            margin-bottom: 50px;
+            text-align: center;
+            button {
+                border: 0px;
+                padding: 7px 15px;
+                font-size: 22px;
+                font-weight: 200;
+                color: #5E5E5E;
+            }
+        }
+        .item-content {
+            .menu-single-item {
+                .menu-image {
+                    position: relative;
+                    overflow: hidden;
+                    img {
+                        transition: all 1s ease;
+                    }
+                    &:hover img {
+                        transform: scale(1.8);
+                    }
+                    .menu-price {
+                        background: $primary_color;
+                        display: block;
+                        color: $common_color;
+                        position: absolute;
+                        top: 10px;
+                        transform: rotate(-45deg);
+                        width: 106px;
+                        left: -29px;
+                        text-align: center;
+                        font-size: 22px;
+                    }
+                }
+                .menu-desc {
+                    margin-top: 25px;
+                    h1 {
+                        font-size: 22px;
+                        font-weight: 400;
+                        color: rgba(50, 51, 51, .8);
+                    }
+                    p {
+                        line-height: 25px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ==============================================
+ 6. Order-section
+ ============================================== */
+
+#order-section {
+    padding: 25px 0px;
+    .book-table-title {
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 25px;
+        h2 {
+            font-weight: 400px;
+        }
+        p {
+            margin-bottom: 25px;
+            color: $primary_color;
+        }
+    }
+    .book-table {
+        .order-btn {
+            background: $primary_color !important;
+            width: 100%;
+            padding: 13px 10px;
+            border: 0px;
+            &:hover {
+                background: $hover_color2 !important;
+            }
+        }
+    }
+    .booking-imgbg {
+        img {
+            height: auto;
+        }
+    }
+}
+
+/* ==============================================
+ 7. our-team-section Start
+ ============================================== */
+
+#our-team-section {
+    padding: 25px 0px;
+    .team-title {
+        margin-bottom: 50px;
+        h2 {
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+    }
+    .team-item {
+        .team-image {
+            margin-bottom: 25px;
+            img {
+                height: 300px;
+            }
+        }
+        .team-txt {
+            text-align: center;
+        }
+    }
+}
+
+/* ==============================================
+ 8. Online order section
+ ============================================== */
+
+#online-order-section {
+    padding: 25px 0px;
+    .book-table-title {
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 25px;
+        h2 {
+            font-weight: 400px;
+        }
+        p {
+            margin-bottom: 25px;
+            color: $primary_color;
+        }
+    }
+    .online-reservation {
+        .order-btn {
+            background: $primary_color !important;
+            width: 100%;
+            padding: 13px 10px;
+            border: 0px;
+            &:hover {
+                background: $hover_color2 !important;
+            }
+        }
+    }
+}
+
+/* ==============================================
+ 9. Our Gellary section
+ ============================================== */
+
+#gallery-section {
+    padding: 25px 0px 0px;
+    .gallery-title {
+        margin-bottom: 50px;
+        h2 {
+            text-align: center;
+            text-transform: uppercase;
+            padding: 16px 0px;
+        }
+    }
+    .gallery-item {
+        cursor: pointer;
+    }
+}
+
+/* ==============================================
+ 10. Our Blog section
+ ============================================== */
+
+#blog-section {
+    padding: 50px 0px;
+    .blog-title {
+        margin-bottom: 50px;
+        h2 {
+            text-align: center;
+            text-transform: uppercase;
+            font-family: 'Raleway', sans-serif;
+        }
+    }
+    .blog-item {
+        position: relative !important;
+        margin-bottom: 50px;
+        .blog-image {}
+        .blog-desc {
+            .blog-news-txt {
+                padding: 12px 0px;
+                h3 {
+                    font-family: 'Raleway', sans-serif;
+                }
+                a {
+                    text-decoration: none;
+                    color: $anchor_color1;
+                }
+                p {
+                    font-family: 'Rajdhani', sans-serif;
+                }
+            }
+            .blog-news-info {
+                ul {
+                    list-style: none;
+                    padding: 0px;
+                    li {
+                        float: left;
+                        margin-right: 15px;
+                        span.admin {
+                            margin-left: 7px;
+                        }
+                        span {
+                            margin-left: 6px;
+                        }
+                        img {
+                            width: 25px;
+                            height: 25px;
+                        }
+                    }
+                }
+            }
+            .blog-btn {
+                a {
+                    background: $primary_color !important;
+                    border-color: $border_color1 !important;
+                    padding: 8px 32px;
+                    &:hover {
+                        background: #333333 !important;
+                        border-color: #333333 !important;
+                    }
+                }
+            }
+            .blog-social-media {
+                ul {
+                    list-style: none;
+                    padding: 0px;
+                    li {
+                        float: left;
+                        a {
+                            i.fab {
+                                height: 40px;
+                                width: 40px;
+                                text-align: center;
+                                line-height: 40px;
+                                color: $common_color;
+                                margin-left: 7px;
+                                transition: all 0.3s linear;
+
+                            }
+                            i.fa-facebook {
+                                background: #3B5999;
+                                margin-left: 0px;
+                            }
+                            i.fa-twitter {
+                                background: #55acee;
+                            }
+                            i.fa-pinterest {
+                                background: #bd081c;
+                            }
+                            i.fa-instagram {
+                                background: #e4405f;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .line {
+            content: "";
+            display: block;
+            height: 1px;
+            position: absolute;
+            background: #000;
+            top: 100%;
+            width: 100%;
+            opacity: 0.6;
+
+        }
+    }
+    .blog-category {
+        .blog-search {
+            width: 100%;
+            border: 1px solid $border_color2;
+            font-size: 0;
+            input {
+                border: none;
+                border-radius: none;
+                box-sizing: border-box;
+                padding: 5px 7px;
+                width: 85%;
+                border: 0px;
+                outline: none;
+                font-size: 17px;
+            }
+            button {
+                border: none;
+                width: 15%;
+                box-sizing: border-box;
+                padding: 5px 7px;
+                outline: none;
+                float: right;
+                font-size: 17px;
+                background: $primary_color !important;
+            }
+        }
+    }
+    .categories {
+        h2 {
+            margin: 25px 0px;
+        }
+        ul {
+            list-style: none;
+            padding: 0px;
+            li {
+                border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+                a {
+                    text-decoration: none;
+                    color: $anchor_color1;
+                    padding: 8px 0px;
+                    display: block;
+                    transition: all 0.5s ease;
+                    &:hover {
+                        padding-left: 6px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ==============================================
+ 11. Contact Us section
+ ============================================== */
+
+#contact-section {
+    padding: 25px 0px 50px;
+    .contact-title {
+        margin-bottom: 50px;
+        h2 {
+            text-align: center;
+            text-transform: uppercase;
+        }
+    }
+    .contact-address {
+        ul {
+            padding: 0px;
+            list-style: none;
+            li {
+                margin-bottom: 15px;
+                display: flex;
+                align-items: center;
+                .c-icon {
+                    margin-right: 13px;
+                }
+            }
+        }
+    }
+    .contact-form {
+        button {
+            background: $primary_color !important;
+            border: 1px solid $primary_color !important;
+        }
+    }
+}
+
+/* ==============================================
+ 12. Footer section
+ ============================================== */
+
+#footer-section {
+    background: #333333;
+    color: #fff;
+    padding: 13px 0px;
+    .copy {
+        text-align: center;
+        line-height: 80px;
+    }
+}

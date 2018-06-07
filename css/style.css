@@ -1,0 +1,669 @@
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+/*table of content*/
+/* ==============================================
+* Global
+1. Nav bar
+2. Slide show
+3. About us
+4. Offer section Start
+5.Food menu
+6. Order-section
+7. our-team-section
+8. Online order section
+9. Our Gellary section
+10. Our Blog section
+11. Contact Us section
+12. Footer section
+ ============================================== */
+/*table of content*/
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4; }
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+/*
+ * A better looking default horizontal rule
+ */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle; }
+
+/*
+ * Remove default fieldset styles.
+ */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+textarea {
+  resize: vertical; }
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0; }
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+.navbar-nav .nav-link.active {
+  background: #f00 !important; }
+
+header {
+  padding: 154px 0 100px; }
+
+section {
+  padding: 150px 0; }
+
+/*Responsive*/
+@media (min-width: 992px) {
+  header {
+    padding: 156px 0 100px; } }
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+ * Hide visually and from screen readers
+ */
+.hidden {
+  display: none !important; }
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+  /* 1 */ }
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  -webkit-clip-path: none;
+  clip-path: none;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+  white-space: inherit; }
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+.invisible {
+  visibility: hidden; }
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.clearfix:after {
+  clear: both; }
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */ }
+@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */ }
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster:
+                               http://www.sanbeiji.com/archives/953 */
+    box-shadow: none !important;
+    text-shadow: none !important; }
+
+  a,
+  a:visited {
+    text-decoration: underline; }
+
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: ""; }
+
+  pre {
+    white-space: pre-wrap !important; }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+
+  /*
+   * Printing Tables:
+   * http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  thead {
+    display: table-header-group; }
+
+  tr,
+  img {
+    page-break-inside: avoid; }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3; }
+
+  h2,
+  h3 {
+    page-break-after: avoid; } }
+.clear {
+  clear: both; }
+
+/* ==============================================
+1. Nav bar
+ ============================================== */
+.nav-bg {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 0px 15px !important;
+  padding: 0px; }
+  .nav-bg a {
+    color: #000000; }
+    .nav-bg a:hover {
+      color: #CA3D26; }
+  .nav-bg .top-menu li {
+    padding: 0px 5px;
+    position: relative; }
+    .nav-bg .top-menu li a {
+      text-transform: uppercase;
+      padding: 18px 6px;
+      color: #000000;
+      border-bottom: 4px solid transparent;
+      position: relative; }
+      .nav-bg .top-menu li a:hover {
+        color: #CA3D26; }
+    .nav-bg .top-menu li:after {
+      content: "";
+      display: block;
+      top: 0px;
+      left: 100%;
+      height: 35%;
+      width: 1px;
+      background: #CA3D26;
+      position: absolute; }
+    .nav-bg .top-menu li:last-of-type:after {
+      display: none; }
+  .nav-bg .top-menu li.active a:after {
+    content: "";
+    display: block;
+    background: #CA3D26;
+    height: 4px;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    left: 0px; }
+
+/* ==============================================
+2. Slide show
+ ============================================== */
+.slider-item {
+  height: 500px;
+  position: relative; }
+  .slider-item img {
+    height: 500px; }
+  .slider-item .caption {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .slider-item .caption .cp-text h1 {
+      text-transform: uppercase;
+      color: #FFFFFF; }
+    .slider-item .caption .cp-text p {
+      margin-top: 20px; }
+      .slider-item .caption .cp-text p .btn-reg {
+        background: rgba(0, 0, 0, 0.4);
+        border: 1px solid #fff !important; }
+
+/* ==============================================
+3.  About Section
+ ============================================== */
+#about-section {
+  padding-top: 50px;
+  padding-bottom: 25px; }
+  #about-section .contact-title {
+    margin-bottom: 50px; }
+    #about-section .contact-title h2 {
+      text-transform: uppercase;
+      text-align: center;
+      color: #CA3D26; }
+  #about-section .about-para {
+    line-height: 1.8rem; }
+    #about-section .about-para p {
+      font-size: 16px; }
+    #about-section .about-para .large-letter {
+      float: left;
+      font-size: 80px;
+      font-weight: 700;
+      margin-right: 10px;
+      line-height: 1; }
+
+/* ==============================================
+4. Offer section Start
+ ============================================== */
+#offer-section {
+  padding: 25px 0px;
+  background-image: url(../img/paralex1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 450px;
+  position: relative; }
+  #offer-section:before {
+    content: "";
+    display: block;
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0; }
+  #offer-section .offer-title {
+    margin-bottom: 50px; }
+    #offer-section .offer-title h2 {
+      padding: 25px 0px;
+      text-align: center;
+      color: #FFFFFF; }
+  #offer-section .offer .offer-container .offer-item {
+    text-align: center; }
+    #offer-section .offer .offer-container .offer-item .offer-image {
+      margin-bottom: 25px;
+      position: relative; }
+      #offer-section .offer .offer-container .offer-item .offer-image img {
+        width: 150px !important;
+        height: 150px;
+        border-radius: 50%;
+        display: inline !important; }
+      #offer-section .offer .offer-container .offer-item .offer-image .price {
+        width: 50px;
+        height: 50px;
+        display: block;
+        text-align: center;
+        background: #CA3D26;
+        color: #FFFFFF;
+        border-radius: 50%;
+        position: absolute;
+        top: 0px;
+        right: 25px;
+        line-height: 25px;
+        padding-top: 10px; }
+    #offer-section .offer .offer-container .offer-item .offer-desc h2 {
+      color: #FFFFFF; }
+    #offer-section .offer .offer-container .offer-item .offer-desc p {
+      color: #FFFFFF; }
+    #offer-section .offer .offer-container .offer-item .offer-desc .offer-btn {
+      background: transparent;
+      width: 75%;
+      color: #FFFFFF; }
+      #offer-section .offer .offer-container .offer-item .offer-desc .offer-btn:hover {
+        background: #CA3D26; }
+
+/* ==============================================
+5.  Menus section start
+ ============================================== */
+#menu-section {
+  padding: 25px 0px; }
+  #menu-section .menu-title {
+    margin-bottom: 50px; }
+    #menu-section .menu-title h2 {
+      text-align: center;
+      text-transform: uppercase; }
+  #menu-section .menu-content .td-menu-item {
+    margin-bottom: 50px;
+    text-align: center; }
+    #menu-section .menu-content .td-menu-item button {
+      border: 0px;
+      padding: 7px 15px;
+      font-size: 22px;
+      font-weight: 200;
+      color: #5E5E5E; }
+  #menu-section .menu-content .item-content .menu-single-item .menu-image {
+    position: relative;
+    overflow: hidden; }
+    #menu-section .menu-content .item-content .menu-single-item .menu-image img {
+      transition: all 1s ease; }
+    #menu-section .menu-content .item-content .menu-single-item .menu-image:hover img {
+      transform: scale(1.8); }
+    #menu-section .menu-content .item-content .menu-single-item .menu-image .menu-price {
+      background: #CA3D26;
+      display: block;
+      color: #FFFFFF;
+      position: absolute;
+      top: 10px;
+      transform: rotate(-45deg);
+      width: 106px;
+      left: -29px;
+      text-align: center;
+      font-size: 22px; }
+  #menu-section .menu-content .item-content .menu-single-item .menu-desc {
+    margin-top: 25px; }
+    #menu-section .menu-content .item-content .menu-single-item .menu-desc h1 {
+      font-size: 22px;
+      font-weight: 400;
+      color: rgba(50, 51, 51, 0.8); }
+    #menu-section .menu-content .item-content .menu-single-item .menu-desc p {
+      line-height: 25px; }
+
+/* ==============================================
+ 6. Order-section
+ ============================================== */
+#order-section {
+  padding: 25px 0px; }
+  #order-section .book-table-title {
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 25px; }
+    #order-section .book-table-title h2 {
+      font-weight: 400px; }
+    #order-section .book-table-title p {
+      margin-bottom: 25px;
+      color: #CA3D26; }
+  #order-section .book-table .order-btn {
+    background: #CA3D26 !important;
+    width: 100%;
+    padding: 13px 10px;
+    border: 0px; }
+    #order-section .book-table .order-btn:hover {
+      background: #000000 !important; }
+  #order-section .booking-imgbg img {
+    height: auto; }
+
+/* ==============================================
+ 7. our-team-section Start
+ ============================================== */
+#our-team-section {
+  padding: 25px 0px; }
+  #our-team-section .team-title {
+    margin-bottom: 50px; }
+    #our-team-section .team-title h2 {
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 400; }
+  #our-team-section .team-item .team-image {
+    margin-bottom: 25px; }
+    #our-team-section .team-item .team-image img {
+      height: 300px; }
+  #our-team-section .team-item .team-txt {
+    text-align: center; }
+
+/* ==============================================
+ 8. Online order section
+ ============================================== */
+#online-order-section {
+  padding: 25px 0px; }
+  #online-order-section .book-table-title {
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 25px; }
+    #online-order-section .book-table-title h2 {
+      font-weight: 400px; }
+    #online-order-section .book-table-title p {
+      margin-bottom: 25px;
+      color: #CA3D26; }
+  #online-order-section .online-reservation .order-btn {
+    background: #CA3D26 !important;
+    width: 100%;
+    padding: 13px 10px;
+    border: 0px; }
+    #online-order-section .online-reservation .order-btn:hover {
+      background: #000000 !important; }
+
+/* ==============================================
+ 9. Our Gellary section
+ ============================================== */
+#gallery-section {
+  padding: 25px 0px 0px; }
+  #gallery-section .gallery-title {
+    margin-bottom: 50px; }
+    #gallery-section .gallery-title h2 {
+      text-align: center;
+      text-transform: uppercase;
+      padding: 16px 0px; }
+  #gallery-section .gallery-item {
+    cursor: pointer; }
+
+/* ==============================================
+ 10. Our Blog section
+ ============================================== */
+#blog-section {
+  padding: 50px 0px; }
+  #blog-section .blog-title {
+    margin-bottom: 50px; }
+    #blog-section .blog-title h2 {
+      text-align: center;
+      text-transform: uppercase;
+      font-family: 'Raleway', sans-serif; }
+  #blog-section .blog-item {
+    position: relative !important;
+    margin-bottom: 50px; }
+    #blog-section .blog-item .blog-desc .blog-news-txt {
+      padding: 12px 0px; }
+      #blog-section .blog-item .blog-desc .blog-news-txt h3 {
+        font-family: 'Raleway', sans-serif; }
+      #blog-section .blog-item .blog-desc .blog-news-txt a {
+        text-decoration: none;
+        color: #000000; }
+      #blog-section .blog-item .blog-desc .blog-news-txt p {
+        font-family: 'Rajdhani', sans-serif; }
+    #blog-section .blog-item .blog-desc .blog-news-info ul {
+      list-style: none;
+      padding: 0px; }
+      #blog-section .blog-item .blog-desc .blog-news-info ul li {
+        float: left;
+        margin-right: 15px; }
+        #blog-section .blog-item .blog-desc .blog-news-info ul li span.admin {
+          margin-left: 7px; }
+        #blog-section .blog-item .blog-desc .blog-news-info ul li span {
+          margin-left: 6px; }
+        #blog-section .blog-item .blog-desc .blog-news-info ul li img {
+          width: 25px;
+          height: 25px; }
+    #blog-section .blog-item .blog-desc .blog-btn a {
+      background: #CA3D26 !important;
+      border-color: #CA3D26 !important;
+      padding: 8px 32px; }
+      #blog-section .blog-item .blog-desc .blog-btn a:hover {
+        background: #333333 !important;
+        border-color: #333333 !important; }
+    #blog-section .blog-item .blog-desc .blog-social-media ul {
+      list-style: none;
+      padding: 0px; }
+      #blog-section .blog-item .blog-desc .blog-social-media ul li {
+        float: left; }
+        #blog-section .blog-item .blog-desc .blog-social-media ul li a i.fab {
+          height: 40px;
+          width: 40px;
+          text-align: center;
+          line-height: 40px;
+          color: #FFFFFF;
+          margin-left: 7px;
+          transition: all 0.3s linear; }
+        #blog-section .blog-item .blog-desc .blog-social-media ul li a i.fa-facebook {
+          background: #3B5999;
+          margin-left: 0px; }
+        #blog-section .blog-item .blog-desc .blog-social-media ul li a i.fa-twitter {
+          background: #55acee; }
+        #blog-section .blog-item .blog-desc .blog-social-media ul li a i.fa-pinterest {
+          background: #bd081c; }
+        #blog-section .blog-item .blog-desc .blog-social-media ul li a i.fa-instagram {
+          background: #e4405f; }
+    #blog-section .blog-item .line {
+      content: "";
+      display: block;
+      height: 1px;
+      position: absolute;
+      background: #000;
+      top: 100%;
+      width: 100%;
+      opacity: 0.6; }
+  #blog-section .blog-category .blog-search {
+    width: 100%;
+    border: 1px solid #000000;
+    font-size: 0; }
+    #blog-section .blog-category .blog-search input {
+      border: none;
+      border-radius: none;
+      box-sizing: border-box;
+      padding: 5px 7px;
+      width: 85%;
+      border: 0px;
+      outline: none;
+      font-size: 17px; }
+    #blog-section .blog-category .blog-search button {
+      border: none;
+      width: 15%;
+      box-sizing: border-box;
+      padding: 5px 7px;
+      outline: none;
+      float: right;
+      font-size: 17px;
+      background: #CA3D26 !important; }
+  #blog-section .categories h2 {
+    margin: 25px 0px; }
+  #blog-section .categories ul {
+    list-style: none;
+    padding: 0px; }
+    #blog-section .categories ul li {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.5); }
+      #blog-section .categories ul li a {
+        text-decoration: none;
+        color: #000000;
+        padding: 8px 0px;
+        display: block;
+        transition: all 0.5s ease; }
+        #blog-section .categories ul li a:hover {
+          padding-left: 6px; }
+
+/* ==============================================
+ 11. Contact Us section
+ ============================================== */
+#contact-section {
+  padding: 25px 0px 50px; }
+  #contact-section .contact-title {
+    margin-bottom: 50px; }
+    #contact-section .contact-title h2 {
+      text-align: center;
+      text-transform: uppercase; }
+  #contact-section .contact-address ul {
+    padding: 0px;
+    list-style: none; }
+    #contact-section .contact-address ul li {
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center; }
+      #contact-section .contact-address ul li .c-icon {
+        margin-right: 13px; }
+  #contact-section .contact-form button {
+    background: #CA3D26 !important;
+    border: 1px solid #CA3D26 !important; }
+
+/* ==============================================
+ 12. Footer section
+ ============================================== */
+#footer-section {
+  background: #333333;
+  color: #fff;
+  padding: 13px 0px; }
+  #footer-section .copy {
+    text-align: center;
+    line-height: 80px; }
+
+/*# sourceMappingURL=style.css.map */
